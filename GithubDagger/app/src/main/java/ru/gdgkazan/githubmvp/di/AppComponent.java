@@ -9,17 +9,11 @@ import ru.gdgkazan.githubmvp.screen.repositories.RepositoriesActivity;
 import ru.gdgkazan.githubmvp.screen.walkthrough.WalkthroughActivity;
 
 /**
- * @author Artur Vasilov
+ * @author Artur Vasilov, added {@link ActivityBuildersModule} by ANIKINKIRILL
  */
 @Singleton
-@Component(modules = {DataModule.class})
+@Component(modules = {DataModule.class, ActivityBuildersModule.class})
 public interface AppComponent {
-
-    void injectAuthActivity(AuthActivity authActivity);
-
-    void injectRepositoriesActivity(RepositoriesActivity repositoriesActivity);
-
-    void injectWalkthroughActivity(WalkthroughActivity walkthroughActivity);
 
     KeyValueStorage keyValueStorage();
 }
